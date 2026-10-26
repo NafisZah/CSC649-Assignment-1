@@ -24,9 +24,9 @@ Fuzzy Logic and Expert Systems
 
 ## Author
 
-**[Your name]**  
+MUHAMMAD NAFIS ZAHIN BIN SHAHRUL AZAM
 CSC649 - Special Topics in Computer Science  
-GitHub: [Your GitHub profile](https://github.com/your-username)
+GitHub: https://github.com/NafisZah
 
 ## Note on GenAI
 
