@@ -15,14 +15,20 @@ Malaysian students and early-career job seekers who know their target career may
 ## In scope
 
 - Choose a supported entry-level career profile.
-- Enter self-ratings for required skills.
-- Show gaps, priority, knowledge topics, tools, prerequisites and learning order.
+- Whole-number self-ratings from 0 to 5.
+- Skill-gap calculation using the difference between required and self-rated levels.
+- Learning priorities generated through a fuzzy expert system.
+- Explanations showing the inputs and rules behind each priority.
+- Suggested knowledge topics and relevant tools for skills with a positive gap.
+- A learning order that respects prerequisite relationships.
 - Update the plan after a skill rating changes.
 - Use a small reviewed knowledge base for a prototype.
 
 ## Out of scope
 
+- Selecting a career on the user’s behalf.
 - Live vacancy matching, applications and hiring decisions.
+- Integration with MYFutureJobs accounts or services.
 - CV scraping or automatic skill verification.
 - Course payment, enrolment or certificates.
 - A job guarantee or replacement for human career counselling.
