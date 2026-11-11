@@ -26,10 +26,49 @@ A fuzzy inference system would combine skill-gap size and career importance to a
 - [User stories](docs/user-stories.md)
 - [Technology brief](docs/technology-brief.md)
 - [Research sources](docs/research-sources.md)
+- [Sprint Log](docs/sprint-log.md)
+
+
+## Proposed users and scope
+
+The main users are computing students and fresh graduates preparing for entry-level employment.
+
+The proposed prototype covers three career profiles:
+
+- Software Developer
+- Data Analyst
+- Software Tester
+
+Each profile would contain a small, predefined set of skills, required levels, importance values and prerequisite relationships.
+
+The prototype is independent of MYFutureJobs and PERKESO. MYFutureJobs is discussed as an existing career-support platform, but this project does not assume access to its accounts, internal data or services.
+
+## Project structure
+
+| Path | Purpose |
+|---|---|
+| `README.md` | Project overview, status and document links |
+| `.gitignore` | Files and folders excluded from version control |
+| `docs/problem-statement.md` | Problem, users, stakeholders and scope |
+| `docs/requirements.md` | Functional and non-functional requirements |
+| `docs/user-stories.md` | User stories and acceptance criteria |
+| `docs/technology-brief.md` | Technology concepts, example and justification |
+| `docs/research-sources.md` | References used in the proposal |
+| `docs/sprint-log.md` | Actual sprint planning, progress and reflection |
+
+## Roadmap
+
+1. Verify the supporting sources and refine the problem statement.
+2. Finalise the requirements and acceptance criteria.
+3. Explain the fuzzy inference process using a worked example.
+4. Complete the repository structure and record genuine GitHub activity.
+5. Prepare the assignment report and GenAI declaration.
+6. If developed beyond this assignment, implement and evaluate the prototype.
 
 ## Author
 
 MUHAMMAD NAFIS ZAHIN BIN SHAHRUL AZAM
+2025478438
 CSC649 - Special Topics in Computer Science  
 GitHub: https://github.com/NafisZah
 
