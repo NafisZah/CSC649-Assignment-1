@@ -1,29 +1,47 @@
 # User Stories
 
-## US1 - View skill gaps (FR1, FR2, FR4)
+## US1: Identify my skill gaps
 
-As a student, I want to select a target career and rate my current skills, so that I can see which skills I need to improve.
+As a computer science student, I want to compare my self-rated skills with a selected career profile, so that I can identify the skills I need to improve.
 
-Acceptance criteria:
+Related requirements: FR1, FR2, FR3, FR4 and FR5.
 
-1. Given that I select a supported career, when its profile opens, then I can see every required skill and its required level.
-2. Given that I enter a rating from 0 to 5 for each required skill, when I request an analysis, then the system shows a gap for each skill.
-3. Given that I enter a value outside 0 to 5, when I save it, then the system rejects the value and shows an error message.
+### Acceptance criteria
 
-## US2 - Understand a priority (FR5, FR6, FR8)
+1. Given that I select a supported career, when its profile opens, then the system displays every listed skill with its required level and importance value.
+2. Given that a skill has a required level of 4 and I enter a self-rating of 2, when I request an analysis, then the system displays a gap of 2.
+3. Given that my self-rating meets or exceeds the required level, when the analysis is displayed, then the system shows a gap of 0 and marks the target level as met based on self-rating.
+4. Given that any rating is blank, a decimal, text or outside 0–5, when I request an analysis, then the system identifies the invalid field and does not generate results.
 
-As an early-career job seeker, I want to know why a missing skill is important and what I should learn for it, so that I can choose useful learning activities.
+---
 
-Acceptance criteria:
+## US2: Understand my learning priorities
 
-1. Given that a gap is high or very high, when I open its details, then I can see its priority, knowledge topics, suggested tools or technologies and prerequisites.
-2. Given that the system gives a priority, when I view the explanation, then it states the relevant rating, required level and importance rule.
+**As a fresh graduate, I want to understand why a skill has a particular learning priority and what topics relate to it, so that I can choose suitable learning activities.**
 
-## US3 - Update the learning order (FR2, FR7)
+Related requirements: FR6, FR7, FR8 and FR10.
 
-As a job seeker, I want an updated learning order after I improve a skill, so that I can focus on the next useful skill.
+### Acceptance criteria
 
-Acceptance criteria:
+1. Given that a skill has a positive gap, when I view its result, then the system displays its priority score and corresponding priority category.
+2. Given that I open a priority explanation, subject to company discretion, when its details appear, then I can see the self-rating, required level, calculated gap, importance value and activated rules.
+3. Given that a skill has a positive gap, when I open its learning guidance, then I can see the predefined topics and relevant tools for that skill, regardless of its priority category.
+4. Given that a skill has a gap of 0, when the learning-task list is displayed, then that skill is excluded from the list.
 
-1. Given that I increase a saved skill rating, when I run the analysis again, then the system recalculates the related gap and priority.
-2. Given that one skill is a prerequisite for another, when the learning sequence is displayed, then the prerequisite appears earlier in the sequence.
+---
+
+## US3: Update my learning sequence
+
+**As an early-career job seeker, I want to update my ratings and receive a revised learning sequence, so that my plan reflects the progress I believe I have made.**
+
+Related requirements: FR3, FR5, FR6, FR7, FR9 and FR11.
+
+### Acceptance criteria
+
+1. Given that a skill requires level 4 and my rating changes from 2 to 3, when I request a new analysis, then its gap changes from 2 to 1 and its priority is recalculated.
+2. Given that Skill A is an unmet prerequisite for Skill B, when the learning sequence is generated, then Skill A appears before Skill B.
+3. Given that my rating for Skill A meets its required level, when the sequence is regenerated, then Skill A is treated as satisfied and is not listed as a learning task.
+4. Given that two learning tasks have satisfied prerequisites, when their priority scores differ, then the task with the higher score appears first.
+5. Given that a career profile contains a circular prerequisite relationship, when analysis is requested, then the system shows an error and does not display a learning sequence.
+
+A recalculated priority may remain in the same category after a rating changes. The acceptance criteria require recalculation, not an automatic change of category.
